@@ -12,7 +12,7 @@ void main() {
       showColors: true,
     ),
   );
-  // TODO
-  // agregar el ShoppingController al DI de Get
+  //Se agrega el ShoppingController al DI de Get
+  Get.lazyPut<ShoppingController>(() => ShoppingController());
   runApp(const MyApp());
 }

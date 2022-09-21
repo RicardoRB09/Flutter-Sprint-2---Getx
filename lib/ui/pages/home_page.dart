@@ -10,32 +10,38 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Column(children: [
-      Stack(
-        children: [buildProfileImage(), customAppBar()],
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              buildProfileImage(),
+              customAppBar(),
+            ],
+          ),
+          const SizedBox(
+            height: 60,
+          ),
+          const Text("Brad Wilson",
+              style: TextStyle(
+                  fontSize: 25.0,
+                  color: Colors.blueGrey,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.w400)),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            "Kilcoole, Waterford",
+            style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.black45,
+                letterSpacing: 2.0,
+                fontWeight: FontWeight.w300),
+          ),
+          CartTotal(),
+        ],
       ),
-      const SizedBox(
-        height: 60,
-      ),
-      const Text("Brad Wilson",
-          style: TextStyle(
-              fontSize: 25.0,
-              color: Colors.blueGrey,
-              letterSpacing: 2.0,
-              fontWeight: FontWeight.w400)),
-      const SizedBox(
-        height: 20,
-      ),
-      const Text(
-        "Kilcoole, Waterford",
-        style: TextStyle(
-            fontSize: 18.0,
-            color: Colors.black45,
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.w300),
-      ),
-      CartTotal()
-    ]));
+    );
   }
 
   Widget buildProfileImage() {
@@ -59,7 +65,7 @@ class HomePage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Get.to(() => ProductList(),
+            onTap: () => Get.to(() => const ProductList(),
                 transition: Transition.circularReveal,
                 duration: const Duration(seconds: 1)),
             child: const Icon(
