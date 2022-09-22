@@ -9,12 +9,14 @@ class ShoppingController extends GetxController {
   // el valor total de la compra
   var total = 0.obs;
 
+  final count = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
     // los dos elementos que vamos a tener en la tienda
-    entries.add(Product(0, "Toy car", 10));
-    entries.add(Product(1, "Toy house", 20));
+    entries.add(Product(0, "Toy Car", 10));
+    entries.add(Product(1, "Toy House", 20));
   }
 
   void calcularTotal() {
@@ -24,8 +26,9 @@ class ShoppingController extends GetxController {
     // print('Product 1 total --> ${entries[0].quantity * entries[0].price}');
     // print('Product 2 total --> ${entries[1].quantity * entries[1].price}');
 
-    newTotal = (entries[0].quantity * entries[0].price) +
-        (entries[1].quantity * entries[1].price);
+    for (var element in entries) {
+      newTotal += (element.quantity * element.price);
+    }
 
     total.value = newTotal;
     // print('Total value --> ${total.value}');
@@ -46,6 +49,7 @@ class ShoppingController extends GetxController {
 
     // finalmente actualizar entries usando el indice y el elemento actualizado
     entries[index].quantity = product.quantity;
+    entries.refresh();
     print('Sumar 1 --> ${entries[index].quantity}');
     calcularTotal();
   }
@@ -68,6 +72,7 @@ class ShoppingController extends GetxController {
 
     // finalmente actualizar entries usando el indice y el elemento actualizado
     entries[index].quantity = product.quantity;
+    entries.refresh();
     print('Restar --> ${entries[index].quantity}');
 
     calcularTotal();

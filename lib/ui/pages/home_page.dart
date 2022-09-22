@@ -21,20 +21,20 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 60,
           ),
-          const Text("Brad Wilson",
+          const Text("Group 7 Toy Store",
               style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.blueGrey,
+                  color: Colors.black,
                   letterSpacing: 2.0,
-                  fontWeight: FontWeight.w400)),
+                  fontWeight: FontWeight.bold)),
           const SizedBox(
             height: 20,
           ),
           const Text(
-            "Kilcoole, Waterford",
+            "Do you want it? You GOT IT!",
             style: TextStyle(
                 fontSize: 18.0,
-                color: Colors.black45,
+                color: Colors.black,
                 letterSpacing: 2.0,
                 fontWeight: FontWeight.w300),
           ),
