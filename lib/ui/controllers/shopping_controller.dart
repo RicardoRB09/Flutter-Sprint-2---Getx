@@ -50,7 +50,7 @@ class ShoppingController extends GetxController {
     // finalmente actualizar entries usando el indice y el elemento actualizado
     entries[index].quantity = product.quantity;
     entries.refresh();
-    print('Sumar 1 --> ${entries[index].quantity}');
+    // print('Sumar 1 --> ${entries[index].quantity}');
     calcularTotal();
   }
 

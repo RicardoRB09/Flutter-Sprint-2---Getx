@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 60,
+            height: 50,
           ),
           const Text("Group 7 Toy Store",
               style: TextStyle(
@@ -46,13 +46,22 @@ class HomePage extends StatelessWidget {
 
   Widget buildProfileImage() {
     return Stack(
-      alignment: Alignment.bottomCenter,
+      alignment: Alignment.center,
       children: const [
         CustomBanner(200),
         CircleAvatar(
-          backgroundImage:
-              NetworkImage("https://randomuser.me/api/portraits/men/75.jpg"),
-          radius: 60.0,
+          radius: 73,
+          backgroundColor: Colors.black,
+          child: CircleAvatar(
+            radius: 70.0,
+            backgroundColor: Colors.white,
+            child: SizedBox(
+              width: 90,
+              child: Image(
+                image: AssetImage("assets/images/logo_construction.png"),
+              ),
+            ),
+          ),
         )
       ],
     );

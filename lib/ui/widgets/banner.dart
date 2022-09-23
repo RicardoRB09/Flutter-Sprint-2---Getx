@@ -9,8 +9,10 @@ class CustomBanner extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: bannerHeight,
-      child: Image.network("https://cdn.wallpapersafari.com/36/58/uVjHlN.jpg",
-          fit: BoxFit.cover),
+      child: Image.network(
+        "https://cdn.wallpapersafari.com/36/58/uVjHlN.jpg",
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

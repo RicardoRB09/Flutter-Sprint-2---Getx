@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(
+      home: Scaffold(
+        backgroundColor: Colors.grey.shade100,
         body: HomePage(),
       ),
     );
