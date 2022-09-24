@@ -9,8 +9,6 @@ class ShoppingController extends GetxController {
   // el valor total de la compra
   var total = 0.obs;
 
-  final count = 0.obs;
-
   @override
   void onInit() {
     super.onInit();
@@ -73,7 +71,7 @@ class ShoppingController extends GetxController {
     // finalmente actualizar entries usando el indice y el elemento actualizado
     entries[index].quantity = product.quantity;
     entries.refresh();
-    print('Restar --> ${entries[index].quantity}');
+    // print('Restar --> ${entries[index].quantity}');
 
     calcularTotal();
   }
